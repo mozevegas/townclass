@@ -8,12 +8,10 @@ namespace TownClass
 {
     class Bank
     {
-
         public Bank(string bankType)
         {
             BuildingType = bankType;
         }
-
         public string Name { get; set; }
         public string BuildingType { get; set; }
         public int NumberOfRooms { get; set; }
@@ -25,7 +23,15 @@ namespace TownClass
         public int Floors { get; set; }
         public int BathRooms { get; set; }
         public int Volume { get; }
-        public string FullAddress { get; }
+
+        // Full Address -- string interpolation
+        public string FullAddress { get { return $"{Address1} {Address2} {city}, {state} {zip}"); } }
+        public string Address1 { get; set; }
+        public string Address2 { get; set; }
+        public string city { get; set; }
+        public string state { get; set; }
+        public string zip { get; set; }
+
         public int CurrentOccupants { get { return _CurrentOccupants; } }
         public int _CurrentOccupants;
 

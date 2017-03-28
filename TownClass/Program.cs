@@ -27,6 +27,18 @@ namespace TownClass
             houseColl.Add(new House() { Name = "Home" });
             houseColl.Add(new House() { Name = "Casa" });
 
+            // FROM CLASS
+            var myHouse = new House();
+            var myHouse2 = new House("wood");
+            myHouse.Height = 20;
+            myHouse.Width = 55;
+
+            var newHouse3 = new House();
+
+            // List from class
+            var villageBlck = new List<House>(); //brackets say type
+            villageBlck.Add(myHouse);
+
 
         }
     }

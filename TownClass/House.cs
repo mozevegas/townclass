@@ -8,11 +8,13 @@ namespace TownClass
 {
     class House
     {
+        public House()
+        {
+        }
         public House(string type)
         {
             BuildingType = type;
         }
-
         public string Name { get; set; }
         public string BuildingType { get; set; }
         public int NumberOfRooms { get; set; }
@@ -25,8 +27,8 @@ namespace TownClass
         public int BedRooms { get; set; }
         public int BathRooms { get; set; }
         public double Volume { get { return (Height * Width * Length); } }
-        // Full Address
-        public string FullAddress { get { return (Address1 + Address2 + city + state + zip); } }
+        // Full Address -- string interpolation
+        public string FullAddress { get { return $"{Address1} {Address2} {city}, {state} {zip}"); } }
         public string Address1 { get; set; }
         public string Address2 { get; set; }
         public string city { get; set; }
